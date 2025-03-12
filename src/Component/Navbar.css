@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Atomic+Age&family=Exo:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* General Navbar Styling */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 10rem;
+  background-color: transparent;
+  position: relative;
+}
+
+/* Logo */
+.navbar__logo {
+  height: auto;
+  width: 240px;
+}
+
+/* Wallet Button */
+
+/* From Uiverse.io by adamgiebl */ 
+button {
+    display: flex;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 0.8em 1.3em 0.8em 0.9em;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    border: none;
+    letter-spacing: 0.05em;
+    border-radius: 16px;
+  }
+  
+  button svg {
+    margin-right: 3px;
+    transform: rotate(30deg);
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  button span {
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  button:hover svg {
+    transform: translateX(5px) rotate(90deg);
+  }
+  
+  button:hover span {
+    transform: translateX(7px);
+  }
+  
+
+/* Centered Navigation (Hidden on mobile) */
+.navbar__nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar__nav ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__nav ul li a {
+  padding: 10px;
+  font-size: 25px;
+  text-decoration: none;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Remove hover effect */
+.navbar__nav ul li a:hover,
+.navbar__nav ul li a.active {
+  color: #4726c0;
+}
+
+/* Burger Menu */
+.navbar__burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.burger-line {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 250px;
+  height: 100%;
+  background-color: #14348d;
+  color: #ECDD91;
+  padding: 1rem;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar__close {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.sidebar__nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebar__nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  font-family: "poppins";
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .navbar__nav,
+  .navbar__wallet {
+    display: none; /* Hide navigation and join button on tablet */
+  }
+
+  .navbar {
+    padding: 1rem 2rem;
+  }
+
+  .navbar__burger {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+
+.navbar {
+  padding: 1rem;
+}
+
+  .navbar__logo {
+    width: 180px;
+  }
+}

@@ -1,0 +1,368 @@
+.particles {
+  position: relative;
+  height: 800px;
+  width: 100%;
+  background-color: black;
+}
+
+.particles h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 4rem;
+  font-family: "poppins", "sans-seri";
+  font-weight: 500;
+}
+
+.particles h2 span {
+  color: #1032c6;
+}
+
+/* Container */
+.event-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  /* background-color: #f4f4f9; */
+  background-color: black;
+}
+
+/* Filter Dropdown */
+.filter-options select {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #3f2b2b;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* Events List */
+.event-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 50px;
+  max-width: 700px;
+  width: 100%;
+  margin: 60px 0;
+  font-family: "poppins", 'sans-seri';
+  font-weight: 300;
+}
+
+:root {
+  --arrow-bg: rgba(173, 209, 43, 0.3);
+  --arrow-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);
+  --option-bg: white;
+  --select-bg: rgba(198, 198, 198, 0.2);
+}
+
+select {
+  /* Reset */
+  appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  /* Personalize */
+  width: 20rem;
+  padding: 1rem 4rem 1rem 1rem;
+  background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em,
+    linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+  color: black;
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  /* Remove IE arrow */
+  &::-ms-expand {
+    display: none;
+  }
+  /* Remove focus outline */
+  &:focus {
+    outline: none;
+  }
+  /* <option> colors */
+  option {
+    color: inherit;
+    background-color: var(--option-bg);
+  }
+}
+
+/* Card */
+.event-card {
+  /* background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    transition: all 0.3s ease-in-out;
+    position: relative; */
+
+  --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+  /* width: 190px;
+ height: 254px; */
+  padding: 8px;
+  border-radius: 1rem;
+  overflow: visible;
+  background: #f7ba2b;
+  background: var(--background);
+  position: relative;
+  z-index: 1;
+  transition: 0.4s ease-in-out;
+}
+
+/*  */
+.event-card::after {
+  position: absolute;
+  content: "";
+  top: 47px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  transform: scale(0.8);
+  filter: blur(25px);
+  background: #f7ba2b;
+  background: var(--background);
+  transition: opacity 0.5s;
+}
+
+.card-info {
+  --color: #181818;
+  background: var(--color);
+  color: var(--color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  border-radius: 0.7rem;
+}
+/*Hover*/
+.event-card:hover::after {
+  opacity: 0;
+}
+
+.event-card:hover .card-info {
+  color: #f7ba2b;
+  transition: color 1s;
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+}
+
+.event-card .event-category {
+  background: #e0ecff;
+  color: #3b82f6;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* Event Image */
+.event-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Date Badge */
+.event-date {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #fff;
+  color: #333;
+  padding: 8px;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.event-date strong {
+  font-size: 18px;
+  display: block;
+}
+
+/* Event Title */
+.event-card h3 {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #222;
+}
+
+/* Event Details */
+.event-card p {
+  font-size: 14px;
+  color: #666;
+  margin: 4px 0;
+}
+
+.icon-calendar::before {
+  content: "📅";
+  margin-right: 6px;
+}
+
+.icon-clock::before {
+  content: "⏰";
+  margin-right: 6px;
+}
+
+/* Event Link */
+.event-link {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  background: #111;
+  padding: 12px;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.event-link:hover {
+  background: #333;
+}
+
+/* Add Event Button */
+.add-event-btn {
+  background: #3b82f6;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: .7s ease;
+}
+
+.add-event-btn:hover {
+  background: #2563eb;
+}
+
+/* Add Event Form */
+.add-event-form {
+  margin-top: 30px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  background: rgb(30, 30, 30);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: white;
+  text-align: center;
+  font-family: "poppins", 'sans-seri';
+  font-weight: 300;
+}
+
+.add-event-form.show {
+  display: flex;
+  opacity: 1;
+}
+
+.add-event-form input,
+.add-event-form select,
+.add-event-form button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  background-color: rgb(23, 23, 23);
+  color: white;
+}
+
+.add-event-form select {
+    color: black;
+}
+
+/* Input and Button Styling */
+.add-event-form input[type="text"],
+.add-event-form input[type="date"],
+.add-event-form input[type="time"],
+.add-event-form select {
+  width: auto;
+}
+
+.add-event-form button {
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+  border: none;
+  width: 100px;
+  transform: translate(100%);
+}
+
+.add-event-btn {
+    margin: 40px;
+}
+
+.add-event-form button:hover {
+  background: #2563eb;
+}
+
+/* Add Event Form Close Button */
+.add-event-form button.close-btn {
+  background: #f44d4d;
+  color: white;
+}
+
+.add-event-form button.close-btn:hover {
+  background: #e43e3e;
+}
+
+/* Styling for Category Images (optional) */
+.religious-image {
+  background-image: url("../assets/religious.jpg");
+  background-size: cover;
+}
+
+.social-image {
+  background-image: url("../assets/social.jpg");
+  background-size: cover;
+}
+
+.charity-image {
+  background-image: url("../assets/charity.jpg");
+  background-size: cover;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .event-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .add-event-form {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .particles h2 {
+    font-size: 2.5rem;
+  }
+}
