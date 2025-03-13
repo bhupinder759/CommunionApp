@@ -527,6 +527,7 @@
     }
 
     .counter {
+      padding: 4rem 0;
       gap: 2rem;
     }
   }
@@ -742,6 +743,7 @@
 
     .rightbox6 {
       padding: 0;
+      margin: 3rem 0;
     }
    }
 

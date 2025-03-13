@@ -84,3 +84,10 @@
         flex-direction: column;
     }
 }
+
+@media (max-width:480px) {
+    .down-content {
+        margin: 2rem;
+        text-align: center;
+    }
+}
