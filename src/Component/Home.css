@@ -246,6 +246,20 @@
     }
   }
 
+  @media (max-width:480px) {
+    .exbtn {
+      font-size: 14px;
+    }
+
+    .btncta {
+      font-size: 14px;
+    }
+
+    .right-container {
+      margin-bottom: 25px;
+    }
+  }
+
   
 /* second section */
 
@@ -264,6 +278,12 @@
     .section2 {
         margin-top: 0;
     }
+}
+
+@media (max-width: 480px) {
+  .rightbox .bttn {
+    margin-left: 0;
+  }
 }
 
 /* section 3 */
@@ -600,12 +620,20 @@
         padding: 1rem;
     }
 
+    .counter {
+      padding: 4rem 0rem;
+    }
+
     .content5 h2 {
       font-size: 3rem;
     }
 
     .leftbtn5 {
       margin-left: 0;
+    }
+
+    .button5 {
+      font-size: 14px;
     }
 }
 
@@ -696,12 +724,20 @@
         padding: 1rem;
     }
 
+    .parent-container6 .leftbox6 {
+      padding: 1rem ;
+    }
+
     .leftbox6 h2 {
       font-size: 2.9rem;
     }
 
     .leftbtn6 {
       margin-left: 0;
+    }
+
+    .rightbox6 {
+      padding: 0;
     }
    }
 
