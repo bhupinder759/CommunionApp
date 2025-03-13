@@ -1,16 +1,69 @@
-<<<<<<< HEAD
-# CommunionApp
-=======
-# React + Vite
+# Communion App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+The **Communion App** is a web-based platform designed to facilitate community events and gatherings. It allows users to add, manage, and participate in various events, providing a seamless experience for social and religious communities.
 
-Currently, two official plugins are available:
+## Live Demo
+You can access the live version of the app here:
+[Communion App Live](https://communion-app-nu.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Repository
+The source code is available on GitHub:
+[Communion App GitHub Repository](https://github.com/bhupinder759/CommunionApp.git)
 
-## Expanding the ESLint configuration
+## Features
+- **Event Management**: Add, update, and delete events with ease.
+- **User-Friendly Interface**: Intuitive design for smooth navigation.
+- **Event Categories**: Events categorized into Religious, Social, and Charity.
+- **Responsive Design**: Fully optimized for both desktop and mobile screens.
+- **Seamless Navigation**: Integrated navbar for easy access to sections.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
->>>>>>> 9dda86c (first hai)
+## Technologies Used
+- **Frontend**: React.js, Vite
+- **Styling**: Tailwind CSS
+- **Deployment**: Vercel
+- **Version Control**: Git & GitHub
+
+## Installation
+Follow these steps to run the project locally:
+
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/bhupinder759/CommunionApp.git
+   ```
+
+2. **Navigate to the project directory:**
+   ```sh
+   cd CommunionApp
+   ```
+
+3. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+
+4. **Start the development server:**
+   ```sh
+   npm run dev
+   ```
+
+5. **Open in browser:**
+   Visit `http://localhost:5173` to view the app.
+
+## Deployment
+The app is deployed using **Vercel**. Any changes pushed to the `main` branch are automatically deployed.
+
+## Issues & Bugs
+If you encounter any issues, please report them in the [GitHub Issues](https://github.com/bhupinder759/CommunionApp/issues) section.
+
+## Contributing
+Contributions are welcome! To contribute:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes and commit (`git commit -m "Added new feature"`).
+4. Push to your branch (`git push origin feature-branch`).
+5. Create a pull request.
+
+## License
+This project is licensed under the MIT License.
+
